@@ -1,0 +1,77 @@
+<ion-content style="background-color:#e2e2e2;">
+	<div class="highlight" ng-if="data.level == 0">
+		<div ng-repeat="items in data.items">
+			<div ng-if="items.menu_type == 'header_menu'">
+				<div class="highlight-menu">
+					<div class="menu-name">{{ items.name }}</div>
+					<div class="menu-item">
+						<div ng-repeat="sub in items.sub">
+							<a href="#/apartment/highlight/{{ data.data.id }}/{{ data.category.id }}/{{ sub.id }}" ng-if="sub.menu_type == 'details'">{{ sub.name}}</a>
+							<span ng-if="sub.menu_type == 'text'">{{ sub.name }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="items.menu_type == 'details'">
+				<div class="highlight-menu">
+					<div class="menu-item">
+						<div>
+				  			<a href="#/apartment/highlight/{{ data.data.id }}/{{ data.category.id }}/{{ items.id }}">{{ items.name }}</a>
+				  		</div>
+				  	</div>
+				</div>
+			</div>
+			<div ng-if="items.menu_type == 'text'">
+				<div class="highlight-menu">
+					<div class="menu-item">
+						<div>
+				  			<span>{{ items.name }}</span>
+				  		</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content highlight" ng-if="data.level > 0">
+		<div ng-repeat="items in data.items">
+			<div ng-if="items.menu_type == 'header_menu'">
+				<div class="highlight-menu">
+					<div class="menu-name">{{ items.name }}</div>
+					<div class="menu-item">
+						<div ng-repeat="sub in items.sub">
+							<a href="#/apartment/highlight/{{ data.data.id }}/{{ data.category.id }}/{{ sub.id }}" ng-if="sub.menu_type == 'details'">{{ sub.name}}</a>
+							<span ng-if="sub.menu_type == 'text'">{{ sub.name }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="items.menu_type == 'details'">
+				<div class="highlight-menu">
+					<div class="menu-item">
+						<div>
+				  			<a href="#/apartment/highlight/{{ data.data.id }}/{{ data.category.id }}/{{ items.id }}">{{ items.name }}</a>
+				  		</div>
+				  	</div>
+				</div>
+			</div>
+			<div ng-if="items.menu_type == 'text'">
+				<div class="highlight-menu">
+					<div class="menu-item">
+						<div>
+				  			<span>{{ items.name }}</span>
+				  		</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-if="data.items.menu_type == 'details'">
+			<div class="highlight-details">
+				<img src="{{ site_url +'asset/upload/'+ data.items.images }}" alt="{{ data.items.name }}">
+				<div class="details-name">{{ data.items.name }}</div>
+				<div class="details-content">{{ data.items.description }}</div>
+			</div>
+		</div>
+	</div>
+</ion-content>

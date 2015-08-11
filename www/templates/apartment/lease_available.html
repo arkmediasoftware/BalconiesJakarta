@@ -1,0 +1,19 @@
+<ion-content>
+	<div class="apartment">
+		<div class="main" ng-repeat="item in data.items">
+			<div class="name">{{ item.name }}</div>
+			<div class="gallery">
+				<div class="swiper-container" style="height:210px">
+				    <div class="swiper-wrapper">
+						<div class="swiper-slide">
+					        <a href="javascript:;"><img src="{{ site_url + 'asset/upload/' + item.images }}" alt="{{ item.name }}" style="width:100%; height:100%;"></a>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="description">
+				<a href="http://www.jualsewaapartemen.co.id/" target="_blank">Read More</a>
+			</div>
+		</div>
+	</div>
+</ion-content>

@@ -1,0 +1,236 @@
+/* Empty. Add your own CSS if you like */
+html, body {
+	margin:0px;
+	padding: 0px;
+	height: 100%;
+}
+#header {
+	height: 50px;
+	background-color: #DF314D;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: Arial;
+	padding: 0px 10px;
+}
+#header .title {
+	line-height: 50px;
+}
+
+#header .navigation {
+	float: left;
+	width: 35px;
+	height: 40px;
+	padding:5px;
+	margin-right: 5px;
+	position: relative;
+}
+#header .navigation #toggle {
+	display: block;
+	padding: 8px 0px 10px;
+}
+#header .navigation #toggle .bars {
+	width: 100%;
+	height: 5px;
+	margin-bottom: 3px;
+	display: block;
+	background-color: #ffffff;
+}
+#swiper-menu {
+	width: 5px;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 100;
+}
+#sidebar {
+    position: absolute;
+    background: #DF314D;
+    width: 240px;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
+    left: -240px;
+
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+}
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#sidebar ul li {
+    margin: 0;
+}
+#sidebar ul li a {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #C9223D;
+    -webkit-transition:  background 0.3s ease-in-out;
+    -moz-transition:  background 0.3s ease-in-out;
+    -ms-transition:  background 0.3s ease-in-out;
+    -o-transition:  background 0.3s ease-in-out;
+    transition:  background 0.3s ease-in-out;
+}
+#sidebar ul li:hover a {
+    background: #C9223D;
+}
+.open-sidebar {
+    left: 240px;
+}
+
+
+/*Apartment Class*/
+.apartment {}
+.apartment .main {
+    width: 100%;
+    height: 300px;
+}
+.apartment .main .name {
+    height: 40px;
+    line-height: 40px;
+    font-family: Tahoma;
+    font-size: 16px;
+    color: #333;
+    padding:0px 10px;
+
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+.apartment .main .gallery {
+    height: 200px;
+}
+.apartment .main .gallery a img{
+    height: 100%;
+    width: 100%;
+}
+.apartment .main .description {
+    padding:0px 10px;
+    line-height: 50px;
+    border-bottom: 2px solid #ff0000;
+
+}
+.apartment .main .description a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+
+}
+.apartment .main .menu-caption {
+    padding:0px;
+    margin:0px;
+    margin-top: 5px;
+}
+.apartment .main .menu-caption li {
+    list-style: none;
+    display: inline-table;
+    height: 50px;
+    line-height: 50px;
+    width: 32.5%;
+    text-align: center;
+}
+.apartment .main .menu-caption li a {
+    text-decoration: none;
+    color: #333;
+    display: block; 
+    border-bottom: 2px solid #ff0000;
+}
+
+.apartment .list-apartment {
+    padding: 5px;
+}
+
+.apartment .list-apartment a {
+    text-decoration: none;
+}
+.apartment .list-apartment .list-item{
+    height: 60px;
+    line-height: 50px;
+    float: left;
+    width: 100%;
+    margin-bottom:10px;
+    border-bottom: 1px solid #ccc;
+}
+.apartment .list-apartment .list-item img{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+.apartment .list-apartment .list-item .name {
+    padding: 0px 55px;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*Highlight*/
+.highlight {}
+
+.highlight .highlight-menu {
+    background-color: #e2e2e2;
+    padding-bottom: 10px;
+}
+.highlight .highlight-menu .menu-name {
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+
+.highlight .highlight-menu .menu-item {
+    background-color: #f9f9f9;
+}
+.highlight .highlight-menu .menu-item div{
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #ccc;
+}
+.highlight .highlight-menu .menu-item div a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.highlight .highlight-details{}
+.highlight .highlight-details img {
+    width: 100%;
+    height: 200px;
+}
+.highlight .highlight-details .details-name {
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+}
+.highlight .highlight-details .details-content {
+    padding:10px;
+}

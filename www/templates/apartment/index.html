@@ -1,0 +1,50 @@
+<ion-content>
+	<div class="apartment">
+		<div class="main">
+			<div class="name">{{ data.main.name }}</div>
+			<div class="gallery">
+				<div class="swiper-container" style="height:210px">
+				    <div class="swiper-wrapper">
+						<div class="swiper-slide">
+					        <a href="javascript:;"><img src="{{ site_url + 'asset/upload/apartment/' + data.main.images }}" alt="{{ data.main.name }}" style="width:100%; height:100%;"></a>
+					    </div>
+						<div class="swiper-slide" ng-repeat="gallery in data.gallery" repeat-done="setSwiperSlide()">
+					        <a href="javascript:;">
+					        	<img data-src="{{ site_url + 'asset/upload/' + gallery.images }}" style="width:100%; height:100%;" class="swiper-lazy">
+					        	<div class="swiper-lazy-preloader"></div>
+					        </a>
+					    </div>
+					</div>
+				    <div class="swiper-pagination" style="display:none;"></div>
+				    <div class="swiper-button-next" style="display:none;"></div>
+				    <div class="swiper-button-prev" style="display:none;"></div>
+				</div>
+			</div>
+			<div class="menu-caption">
+				<ul>
+					<li><a href="#/apartment/highlight/{{ data.main.id }}/1/0">Highlight</a></li>
+					<li><a href="#/apartment/usefull_info/{{ data.main.id }}/3/0">Usefull Info</a></li>
+					<li><a href="#/apartment/lease_available/{{ data.main.id }}/4/0">Lease Available</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="list-apartment">
+			<a ng-repeat="list in data.list" href="#/apartment/{{ list.id }}" repeat-done="lazyLoadImage()">
+				<div class="list-item">
+					<img class="lazy" data-original="{{ site_url +'asset/upload/apartment/'+ list.images }}" src="{{ site_url +'asset/upload/apartment/'+ list.images }}" width="50" height="50">
+					<div class="name">{{ list.name }}</div>
+				</div>
+			</a>
+
+			<!-- For adding space at bottom only -->
+			<a href="#">
+				<div class="list-item" style="border-bottom:none;">
+					<img src="" style="display:none;">
+					<div class="name">&nbsp;</div>
+				</div>
+			</a>
+			<!-- For adding space at bottom only -->
+		<div>
+	</div>
+</ion-content>
