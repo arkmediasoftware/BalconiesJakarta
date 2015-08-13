@@ -213,6 +213,24 @@ html, body {
     text-decoration: none;
 }
 
+.highlight .highlight-menu .menu-item div.details {
+}
+.highlight .highlight-menu .menu-item div.details a.next-button{    
+    float: right;
+    margin-top: 3px;
+    margin-right: -5px;
+    height: 35px;
+    width: 35px;
+    background: url('../img/next-ico.png');
+    background-size: 100% 100%;
+}
+
+.highlight .highlight-menu .menu-item div.phone {
+}
+.highlight .highlight-menu .menu-item div.phone .phone-number{
+    float: right;
+}
+
 .highlight .highlight-details{}
 .highlight .highlight-details img {
     width: 100%;

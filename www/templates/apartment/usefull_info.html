@@ -1,4 +1,4 @@
-<ion-content style="background-color:#e2e2e2;">
+<ion-content style="background-color:#fff;">
 	<div class="highlight" ng-if="data.level == 0">
 		<div ng-repeat="items in data.items">
 			<div ng-if="items.menu_type == 'header_menu'">
@@ -7,7 +7,9 @@
 					<div class="menu-item">
 						<div ng-repeat="sub in items.sub">
 							<a href="#/apartment/highlight/{{ data.data.id }}/{{ data.category.id }}/{{ sub.id }}" ng-if="sub.menu_type == 'details'">{{ sub.name}}</a>
+							<div ng-if="sub.menu_type == 'phone'" class="phone">{{ sub.name}} <span class="phone-number"><a href="tel:{{ sub.description }}">{{ sub.description }}</a></span></div>
 							<span ng-if="sub.menu_type == 'text'">{{ sub.name }}</span>
+
 						</div>
 					</div>
 				</div>

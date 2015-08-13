@@ -21,12 +21,12 @@ angular.module('starter.controller',[])
 		if(sidebar.className == 'null' || sidebar.className == '') {
 			move(sidebar)
 			.set('left', 0)
-			.end(function(){
-				move(swiper_menu)
-				.set('left','240px')
-				.set('width','100%')
-				.end();
-			});
+			.end();
+
+			move(swiper_menu)
+			.set('left','240px')
+			.set('width','100%')
+			.end();
 
 			sidebar.className = 'open-sidebar';
 		} else {
