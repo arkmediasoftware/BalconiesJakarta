@@ -46,11 +46,21 @@ angular.module('starter', ['ionic','starter.controller','starter.service','ngCoo
     templateUrl:'templates/class_communities/index.html',
     controller:'classCommunitiesController'
   })
+  .state('class_communities_details',{
+    url:'/class_communities_details/:id',
+    templateUrl:'templates/class_communities/details.html',
+    controller:'classCommunitiesDetailsController'
+  })
 
   .state('events_upcoming',{
     url:'/events_upcoming',
     templateUrl:'templates/events_upcoming/index.html',
     controller:'eventsUpcomingController'
+  })
+  .state('events_upcoming_details',{
+    url:'/events_upcoming_details/:id',
+    templateUrl:'templates/events_upcoming/details.html',
+    controller:'eventsUpcomingDetailsController'
   })
 
   $urlRouterProvider.otherwise('apartment/null');

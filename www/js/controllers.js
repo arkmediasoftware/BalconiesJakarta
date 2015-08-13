@@ -131,6 +131,12 @@ angular.module('starter.controller',[])
 		}
 	})	
 })
+.controller('classCommunitiesDetailsController',function($rootScope, $scope, $http, $state, $stateParams, $ionicPopup) {
+	$http.get($rootScope.site_url + 'api/class_communities/details?id=' + $stateParams.id)
+	.success(function(data){
+		$scope.data = data;
+	})	
+})
 
 .controller('eventsUpcomingController',function($rootScope, $scope, $http, $state, $stateParams, $ionicPopup) {
 	$http.get($rootScope.site_url + 'api/events/list')
@@ -146,5 +152,12 @@ angular.module('starter.controller',[])
 				$state.go('apartment');
 			});
 		}
+	})	
+})
+
+.controller('eventsUpcomingDetailsController',function($rootScope, $scope, $http, $state, $stateParams, $ionicPopup) {
+	$http.get($rootScope.site_url + 'api/events/details?id=' + $stateParams.id)
+	.success(function(data){
+		$scope.data = data;
 	})	
 })

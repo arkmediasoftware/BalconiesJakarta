@@ -1,3 +1,8 @@
 <ion-content>
-
+	<div ng-repeat="row in data.list" class="items-events">
+		<a href="#/events_upcoming_details/{{ row.id }}">
+			<div class="name">{{ row.name }}</div>
+			<div class="img"><img src="{{ site_url +'asset/upload/'+ row.images}}">
+		</a>
+	</div>
 </ion-content>
