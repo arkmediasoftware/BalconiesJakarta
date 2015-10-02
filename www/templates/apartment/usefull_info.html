@@ -70,7 +70,7 @@
 
 		<div ng-if="data.items.menu_type == 'details'">
 			<div class="highlight-details">
-				<img src="{{ site_url +'asset/upload/'+ data.items.images }}" alt="{{ data.items.name }}">
+				<img ng-if="data.items.images != null" src="{{ site_url +'asset/upload/'+ data.items.images }}" alt="{{ data.items.name }}">
 				<div class="details-name">{{ data.items.name }}</div>
 				<div class="details-content">{{ data.items.description }}</div>
 			</div>
